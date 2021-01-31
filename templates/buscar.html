@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
 <!-- Preloader -->
 <div id="preloader">
     <i class="circle-preloader"></i>
     <img src="{% static 'img/core-img/pizza.png' %}" alt="">
 </div>
-
 
 {% include 'partials/_busca.html' %}
 
@@ -23,7 +21,7 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
                     {% if receita.foto_receita == '' %}
-                    <img src="{% static 'img/bg-img/foto_receita.png' %}" />
+                    <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
                     {% else %}
                     <img src="{{ receita.foto_receita.url }}" alt="">
                     {% endif %}
@@ -36,13 +34,9 @@
             </div>
             {% endfor %}
             {% else %}
-
             <div class="col-12 col-sm-6 col-lg-4">
-                <p>
-                    Receita não encontrada
-                </p>
+                <p>Receita não encontrada</p>
             </div>
-
             {% endif %}
         </div>
     </div>
@@ -50,5 +44,4 @@
 <!-- ##### Best Receipe Area End ##### -->
 
 {% include 'partials/_footer.html' %}
-
 {% endblock %}

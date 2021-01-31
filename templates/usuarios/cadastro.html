@@ -26,6 +26,8 @@
                 <div class="contact-form-area">
                     <form action="{% url 'cadastro' %}" method="POST">
                         {% csrf_token %}
+                        {% include 'partials/_alerts.html' %}
+
                         <div class="row">
                             <div class="col-12 col-lg-12">
                                 <label for="nome_receita"><b>Nome completo</b></label>
